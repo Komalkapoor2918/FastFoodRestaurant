@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<!-- Add: https://images.all-free-download.com/images/graphicthumb/button_add_89666.jpg
+     Home: https://icon-library.net/images/home-logo-icon/home-logo-icon-16.jpg
+     PreviousOrders: https://datzeehw2wlqg.cloudfront.net/wp-content/uploads/2018/05/Online_Ordering-01.jpg
+     Clear: http://cqrecords.com/wp-content/uploads/pn/thumb-png-broom-computer-icons-dustpan-vector-graphics-house.jpg
+-->
+
+<AnchorPane prefHeight="570.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OrderController">
+   <children>
+      <AnchorPane layoutX="-130.0" layoutY="-206.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="113.0" layoutY="53.0" text="Place Your Order">
+         <font>
+            <Font name="Segoe Script Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="120.0" text="Food: " />
+      <Label layoutX="13.0" layoutY="152.0" text="Drink: " />
+      <Label layoutX="200.0" layoutY="116.0" text="Quantity:" />
+      <Label layoutX="204.0" layoutY="152.0" text="Quantity: " />
+      <Label layoutX="13.0" layoutY="218.0" text="Sub Total: " />
+      <Label layoutX="13.0" layoutY="246.0" text="HST:" />
+      <Label layoutX="14.0" layoutY="279.0" text="Total: " />
+      <TextField fx:id="SubTotal" layoutX="81.0" layoutY="214.0" />
+      <TextField fx:id="HST" editable="false" layoutX="81.0" layoutY="242.0" text="0.13" />
+      <TextField fx:id="Total" layoutX="81.0" layoutY="275.0" />
+      <TextArea fx:id="taOutput" layoutX="11.0" layoutY="324.0" prefHeight="208.0" prefWidth="480.0" />
+      <Line endX="279.33331298828125" layoutX="197.0" layoutY="195.0" startX="-184.66665649414062" />
+      <ComboBox fx:id="comboFood" layoutX="50.0" layoutY="112.0" prefHeight="25.0" prefWidth="120.0" promptText="Pick a Food" />
+      <ComboBox fx:id="comboDrinks" layoutX="50.0" layoutY="148.0" prefHeight="25.0" prefWidth="120.0" promptText="Pick a Drink" />
+      <ComboBox fx:id="fQuantity" layoutX="268.0" layoutY="112.0" prefHeight="25.0" prefWidth="67.0" promptText="Select..." />
+      <ComboBox fx:id="dQuantity" layoutX="268.0" layoutY="148.0" prefHeight="25.0" prefWidth="67.0" promptText="Select..." />
+      <Label fx:id="lblChoice" layoutX="11.0" layoutY="543.0" prefHeight="25.0" prefWidth="427.0" textFill="#f40f0f" visible="false" />
+      <ImageView fitHeight="44.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgHome" fitHeight="40.0" fitWidth="60.0" layoutX="14.0" layoutY="14.0" onMousePressed="#Home" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/home-logo-icon-16.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgAdd" fitHeight="40.0" fitWidth="60.0" layoutX="436.0" layoutY="141.0" onMousePressed="#Add" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/button_add_89666.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgClear" fitHeight="40.0" fitWidth="60.0" layoutX="368.0" layoutY="268.0" onMousePressed="#Clear" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/thumb-png-broom-computer-icons-dustpan-vector-graphics-house.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgPreviousOrders" fitHeight="40.0" fitWidth="60.0" layoutX="435.0" layoutY="268.0" onMousePressed="#PreviousOrders" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/Online_Ordering-01.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
